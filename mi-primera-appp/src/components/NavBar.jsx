@@ -4,7 +4,9 @@ import CartWidget from './CartWidget'
 const NavBar = () => {
   return (
     <nav>
-        <h2>TIENDA</h2>
+        <h2>
+            TIENDA ONLINE
+         </h2>
         <CartWidget/>
     </nav>
   )
