@@ -1,8 +1,11 @@
 import React from 'react'
+import './Button.css'
 
-export const Button = () => {
+export function Button(props) {
+
+
   return (
-    <button>Button</button>
+    <button style={{ backgroundColor: props.color }} onClick={props.funcion}> {props.children}</button>
   )
 }
 

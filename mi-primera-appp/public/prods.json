@@ -1,0 +1,21 @@
+[
+    {   "id": 1,
+        "title":"nuez",
+        "precio":9000,
+        "stock": 30,
+        "categoria": "frutas secas"
+    },
+
+    {   "id": 2,
+        "title":"mani",
+        "precio":8000,
+        "stock": 30,
+        "categoria": "frutas secas"
+    },
+    {   "id": 3,
+        "title":"avellanas",
+        "precio":12000,
+        "stock": 30,
+        "categoria": "frutas secas"
+    }
+]
