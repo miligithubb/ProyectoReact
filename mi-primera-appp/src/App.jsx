@@ -1,33 +1,23 @@
-import './App.css'
-import { Button } from './components/Button'
-import { ItemCount } from './components/itemCount/ItemCount'
-import ItemListContainer from './components/ItemListContainer'
-import NavBar from './components/NavBar'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ItemDetailContainer } from "./assets/components/ItemDetailContainer.jsx";
+import { ItemListContainer } from "./assets/components/ItemListContainer.jsx";
+import { Navbar } from "./assets/components/NavBar.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
 
-import PostsContainer from './components/PostsContainer'
-import ItemDetailContainer from './components/ItemDetailContainer'
-
-function App() {
-
+export function App() {
   return (
     <>
-
-    <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <Route path='/' element={ <ItemListContainer greeting="Bienvenido!" />}/>
-        <Route path='/Lista/:Lista' element={ <ItemListContainer greeting="Bienvenido!" />}/>
-        <Route path='/detalle/:id' element={<ItemDetailContainer/>} />
-        <Route path='*' element={<h1>Volve!</h1>} /> 
-      </Routes>
-
-    </BrowserRouter>
-
-
+      <BrowserRouter>
+        <Navbar titulo="Dietetica Isabelles" />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+          <Route path="/detalles/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h2>No encontrado</h2>} />
+        </Routes>
+      </BrowserRouter>
     </>
-  ) ;
+  );
 }
 
 export default App;
-

@@ -1,69 +1,83 @@
 const items = [
-    {   id: 1,
-        nombre:"nuez",
-        precio:9000,
-        stock: 30,
-        categoria: "frutas secas",
-    
+    {
+      id: 1,
+      nombre: "Nuez",
+      descripcion: "Nuez premium, ideal para una dieta balanceada.",
+      precio: 9000,
+      categoria: "frutas secas",
+      stock: 30,
     },
-    {   id: 2,
-        nombre:"mani",
-        precio:8000,
-        stock: 30,
-        categoria: "frutas secas"
+    {
+      id: 2,
+      nombre: "Maní",
+      descripcion: "Maní tostado, perfecto como snack o para cocinar.",
+      precio: 8000,
+      categoria: "frutas secas",
+      stock: 30,
     },
-    {   id: 3,
-        nombre:"avellanas",
-        precio:12000,
-        stock: 30,
-        categoria:"frutas secas"
+    {
+      id: 3,
+      nombre: "Avellanas",
+      descripcion: "Avellanas crujientes, excelente para postres y ensaladas.",
+      precio: 12000,
+      categoria: "frutas secas",
+      stock: 30,
     },
-    {   id: 4,
-        nombre:"mani con cascara",
-        precio:5000,
-        stock: 20,
-        categoria:"frutas secas"
+    {
+      id: 4,
+      nombre: "Maní con cáscara",
+      descripcion: "Maní con cáscara natural, ideal para picar.",
+      precio: 5000,
+      categoria: "frutas secas",
+      stock: 20,
     },
-    {   id: 5,
-        nombre:"castanas de caju",
-        precio:30000,
-        stock: 20,
-        categoria:"frutas secas"
+    {
+      id: 5,
+      nombre: "Castañas de Cajú",
+      descripcion: "Castañas de cajú enteras, perfectas para ensaladas y postres.",
+      precio: 30000,
+      categoria: "frutas secas",
+      stock: 20,
     },
-    {   id: 6,
-        nombre:"semillas de lino",
-        precio:3000,
-        stock: 10,
-        categoria:"semillas"
+    {
+      id: 6,
+      nombre: "Semillas de lino",
+      descripcion: "Semillas de lino ricas en omega 3, ideales para batidos.",
+      precio: 3000,
+      categoria: "semillas",
+      stock: 10,
     },
-    {   id: 7,
-        nombre:"semillas de sesamo",
-        precio:3000,
-        stock: 10,
-        categoria:"semillas"
+    {
+      id: 7,
+      nombre: "Semillas de sésamo",
+      descripcion: "Semillas de sésamo, perfectas para panes y galletas.",
+      precio: 3000,
+      categoria: "semillas",
+      stock: 10,
     },
-    {   id: 8,
-        nombre:"semillas de lino integral",
-        precio:4000,
-        stock: 10,
-        categoria:"semillas"
-    }
-
-]
-
-
-export const getProducts = () =>{
-    return new Promise( (resolve, reject) => {
-        setTimeout(() => {
-            resolve(items)            
-        }, 2000);
-    })
-}
-
-export const getProductById = (id) =>{
-    return new Promise( (resolve, reject) => {
-        setTimeout(() => {
-            resolve(items.find(e => e.id === id*1))            
-        }, 500);
-    })
-}
+    {
+      id: 8,
+      nombre: "Semillas de lino integral",
+      descripcion: "Semillas de lino integral, ideales para una dieta rica en fibra.",
+      precio: 4000,
+      categoria: "semillas",
+      stock: 10,
+    },
+  ];
+  
+  export const getProducts = async () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(items);
+      }, 500);
+    });
+  };
+  
+  export const getProductById = (id) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(items.find((e) => e.id === id * 1));
+      }, 500);
+    });
+  };
+  

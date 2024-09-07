@@ -1,26 +1,32 @@
-nav{
+/* Estilo para la barra de navegación */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  color: rgb(181, 17, 17);
   background-color: antiquewhite;
+  color: rgb(181, 17, 17);
+  font-size: 18px;
 }
 
-
-.container{
-  width: 200px;
+/* Contenedor general */
+.container {
+  width: 900px;
+  margin: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
 }
 
-
-img{
+/* Estilo de las imágenes */
+img {
   width: 80px;
   margin: auto;
 }
-.cardReal{
+
+/* Tarjeta de producto */
+.cardReal {
   width: 300px;
   height: 400px;
   border-radius: 5%;
@@ -29,10 +35,76 @@ img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
+.cardReal:hover {
+  transform: scale(1.05);
+}
 
-.Lista{
+/* Lista de productos */
+.Lista {
   display: flex;
   width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo del texto en la tarjeta */
+.cardReal h3 {
+  font-size: 1.2rem;
+  color: #2f4f2f; /* Verde oscuro */
+}
+
+.cardReal p {
+  font-size: 1rem;
+  color: #8B4513; /* Marrón oscuro */
+}
+
+/* Botón de compra */
+.cardReal button {
+  background-color: #2f4f2f; /* Verde oscuro */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cardReal button:hover {
+  background-color: #8B4513; /* Marrón oscuro */
+}
+
+/* Sección para la lista de productos */
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #8B4513;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  color: #98FB98; /* Verde claro */
 }

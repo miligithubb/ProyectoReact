@@ -28,7 +28,7 @@ const PostsContainer = () => {
 
 
         <div>
-            <img src='./vite.svg' alt="se ve bien?" />
+            <img src='./vite.svg' alt="" />
             {
                 posts?.map(post => {
                     return (
@@ -41,4 +41,4 @@ const PostsContainer = () => {
     )
 }
 
-export default PostsContainer
+export default PostsContainer;
